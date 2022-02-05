@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/pang-tong/SpringCloudDemo
+          username: 庞彤
+          password: 1399023932aA
+  zipkin:
+    base-url: http://localhost:9411/
+    enabled: true
+    locator:
+      discovery:
+        enabled: true
+  sleuth:
+    sampler:
+      probability: 1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: springcloud
+    password: 1399023932aA
+
+server:
+  port: 1117
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: feign-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      name: feignservice
+      profile: dev
+    bus:
+      trace:
+        enabled: true
+  zipkin:
+    base-url: http://localhost:9411/
+    enabled: true
+    locator:
+      discovery:
+        enabled: true
+  sleuth:
+    sampler:
+      probability: 1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: springcloud
+    password: 1399023932aA
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
