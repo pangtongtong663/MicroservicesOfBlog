@@ -2,6 +2,7 @@
 ## Background
 本项目是我对大二上半学期所写的myblog项目的一个重构，将原本的SpringBoot单体结构的项目重构为SpringCloud微服务。本项目于大二寒假完成，旨在练习和尝试springcloud相关知识和中间件的使用。
 ## Structure
+![image2](https://github.com/pangtongtong663/picture/blob/main/picture6%20(2).jpg)
 ## Usages
 ### Service Discovery
 本项目采用Netflix Eureka来实现服务的注册与发现，同时两个注册中心作为服务彼此向对方注册，从而实现高可用注册中心。
